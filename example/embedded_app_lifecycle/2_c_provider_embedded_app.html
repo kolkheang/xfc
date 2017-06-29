@@ -22,6 +22,11 @@
     </div>
     <script type="text/javascript">
       XFC.Provider.init({ acls: ['http://localprovider.com:8080' ] })
+
+      XFC.Provider.on('iframeCustomResizer', function(){
+        var h = document.getElementsByTagName('html')[0].scrollHeight + 'px';
+        XFC.Provider.trigger({event: 'iframeCustomResizer', detail: {height: h}});
+      });
     </script>
   </body>
 </html>
