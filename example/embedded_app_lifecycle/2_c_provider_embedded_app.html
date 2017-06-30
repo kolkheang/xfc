@@ -25,7 +25,7 @@
 
       XFC.Provider.on('iframeCustomResizer', function(){
         var h = document.getElementsByTagName('html')[0].scrollHeight + 'px';
-        XFC.Provider.trigger({event: 'iframeCustomResizer', detail: {height: h}});
+        XFC.Provider.trigger('iframeCustomResizer', {height: h});
       });
     </script>
   </body>
